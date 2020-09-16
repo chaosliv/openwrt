@@ -28,13 +28,13 @@ on:
 
 
 #定时触发开始编译(开启定时编译请先关闭SSH,要不然SSH没人管,会卡SSH编译失败)
-#  schedule:
-#    - cron: 0 8 */5 * *
+  schedule:
+    - cron: 0 8 */5 * *
 
 
 #点☆Star触发开始编译
-  watch:
-    types: started
+#  watch:
+#    types: started
 
 
 env:
@@ -43,7 +43,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: diy.config
   DIY_OP_SH: diy-lede.sh
-  SSH_ACTIONS: true
+  SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_CONFIG: true
   UPLOAD_FIRMWARE: true
